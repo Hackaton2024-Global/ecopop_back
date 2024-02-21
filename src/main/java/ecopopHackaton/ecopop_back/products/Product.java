@@ -1,5 +1,7 @@
 package ecopopHackaton.ecopop_back.products;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import ecopopHackaton.ecopop_back.sellers.Seller;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "products")
@@ -22,7 +25,7 @@ public class Product {
     private String product_name;
 
     @Column
-    private String description;
+    private String descrip;
 
     @Column
     private Long price;
@@ -34,15 +37,20 @@ public class Product {
     @JoinColumn(name = "seller_id")
     private Seller seller;
 
+    @Transient
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String sellerName;
+
     public Product() {
     }
 
-    public Product(String product_name, String description, Long price, String img, Seller seller) {
+    public Product(String product_name, String descrip, Long price, String img, Seller seller, String sellerName) {
         this.product_name = product_name;
-        this.description = description;
+        this.descrip = descrip;
         this.price = price;
         this.img = img;
         this.seller = seller;
+        this.sellerName = sellerName;
     }
 
     public Long getId() {
@@ -61,12 +69,12 @@ public class Product {
         this.product_name = product_name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescrip() {
+        return descrip;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
     }
 
     public Long getPrice() {

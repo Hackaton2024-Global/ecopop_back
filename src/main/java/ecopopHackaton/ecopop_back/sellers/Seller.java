@@ -19,12 +19,12 @@ import jakarta.persistence.Table;
 public class Seller {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     @Column(name = "id_seller")
-    private Long Id;
+    private Long id;
 
     @Column
-    private String seller_name;
+    private String sellerName;
 
     @Column
     private String tlf;
@@ -33,33 +33,33 @@ public class Seller {
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "seller", cascade=CascadeType.ALL)
     private Set<Product> products;
 
    
     public Seller() {
     }
 
-    public Seller(String seller_name, String tlf, String email) {
-        this.seller_name = seller_name;
+    public Seller(String sellerName, String tlf, String email) {
+        this.sellerName = sellerName;
         this.tlf = tlf;
         this.email = email;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getSeller_name() {
-        return seller_name;
+    public String getSellerName() {
+        return sellerName;
     }
 
-    public void setSeller_name(String seller_name) {
-        this.seller_name = seller_name;
+    public void setSellerName(String sellerName) {
+        this.sellerName = sellerName;
     }
 
     public String getTlf() {
