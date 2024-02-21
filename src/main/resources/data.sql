@@ -1,0 +1,15 @@
+-- Products
+
+INSERT INTO products (id_product, product_name, descrption, price, img, seller_id) VALUES (default, 'Sillón antiguo inglés Giselle Fenty', 'Los sillones ingleses antiguos son una pieza única de la historia. que viene con sus propias historias para contar. En muchos casos, los muebles ingleses antiguos se transmiten de generación en generación en las familias. Los ricos colores y texturas hacen que cada sillón inglés antiguo valga su peso en oro.', 230, null, 1)
+INSERT INTO products (id_product, product_name, descrption, price, img, seller_id) VALUES (default, 'Mesilla restaurada francesa Lapopie', 'Mesa toda de maciza de nogal, preciosa pátina. Mesa de cocina de trabajo de una antigua granja francesa que hemos decapado a mano dejando la pátina original del nogal antiguo.Principios siglo 20. El sobre son dos piezas de nogal. Cajón operativo. Ideal para silla.', 180, null, 3)
+INSERT INTO products (id_product, product_name, descrption, price, img, seller_id) VALUES (default, 'Sillón vintage restaurado La Pedraza', 'Amuebla tu casa o negocio con este sillón y ganarás en elegancia y confort.Además, los muebles vintage son y serán tendencia siempre.', 210, null, 3)
+INSERT INTO products (id_product, product_name, descrption, price, img, seller_id) VALUES (default, 'Butaca inglesa restaurada', 'Esta butaca inglesa con reposapiés de estilo Morris y de finales del s. XIX llegó a nuestras manos con una tapicería sosainas y con el acabado de la madera en muy mal estado. Después de darle un tinte uniforme de color castaño a toda la madera y rematarla con un acabado a la cera natural, se la llevamos al tapicero para que le pusiera este precioso terciopelo color amarillo mostaza de Gancedo y uno de nuestros tejidos favoritos', 180, null, 2)
+INSERT INTO products (id_product, product_name, descrption, price, img, seller_id) VALUES (default, 'Mesilla inglesa restaurada', 'Mesa toda de maciza de nogal, preciosa pátina. Mesa de cocina de trabajo de una antigua granja francesa que hemos decapado a mano dejando la pátina original del nogal antiguo.Principios siglo 20. El sobre son dos piezas de nogal. Cajón operativo. Ideal para silla.', 230, null, 1)
+INSERT INTO products (id_product, product_name, descrption, price, img, seller_id) VALUES (default, 'Sillón vintage restaurado La Pedraza', 'Los sillones ingleses antiguos son una pieza única de la historia. que viene con sus propias historias para contar. Los ricos colores y texturas hacen que cada sillón inglés antiguo valga su peso en oro.', 200, null, 3)
+
+
+-- Sellers
+
+INSERT INTO sellers (id_seller, seller_name, tlf, email) VALUES (default, 'Pepe', '666555333', 'pepe@google.com')
+INSERT INTO sellers (id_seller, seller_name, tlf, email) VALUES (default, 'Maria', '667556334', 'maria@google.com')
+INSERT INTO sellers (id_seller, seller_name, tlf, email) VALUES (default, 'Ramona', '677586434', 'ramona@google.com')
