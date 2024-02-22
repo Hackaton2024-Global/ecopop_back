@@ -44,13 +44,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(String product_name, String descrip, Long price, String img, Seller seller, String sellerName) {
+    public Product(String product_name, String descrip, Long price, String img, Seller seller) {
         this.product_name = product_name;
         this.descrip = descrip;
         this.price = price;
         this.img = img;
         this.seller = seller;
-        this.sellerName = sellerName;
+        // this.sellerName = sellerName;
     }
 
     public Long getId() {
